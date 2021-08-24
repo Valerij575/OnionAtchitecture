@@ -15,7 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanOnionArchitecture.Infr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreCleanArchitecture.Tests", "CoreCleanArchitecture.Tests", "{A158BBD1-B0E7-4188-83E7-A932A2F30890}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanOnionArchitecture.Web", "CleanOnionArchitecture.Web\CleanOnionArchitecture.Web.csproj", "{634357FD-5D6F-4C5C-AF99-82519B01C422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanOnionArchitecture.Web", "CleanOnionArchitecture.Web\CleanOnionArchitecture.Web.csproj", "{634357FD-5D6F-4C5C-AF99-82519B01C422}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15157A14-10AE-4476-885E-21C943815183}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
