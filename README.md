@@ -37,3 +37,26 @@
 1. Add a Class Library project to our domain layer which will hold the core entities.
 2. Add a new folder Models (or Entities), for the sake of this article let’s assume we are building a library system
 3. Add Project model to the Models folder.
+
+## Infrastructure
+Create a new database context so we can update the database with this new model. We will be doing it in our Infrastructure layer. 
+1. Add new class library called CleanArchitecture.Infra.Data and under that folder named Context.
+2. Add database context ProjectDbContext 
+3. Add Domain Project referece to Infrastructure project
+4. install Following all as same as above steps:
+	- Microsoft.EntityFrameworkCore
+	- Microsoft.EntityFrameworkCore.Design
+	- Microsoft.EntityFrameworkCore.SqlServer
+	- Microsoft.EntityFrameworkCore.Tools
+5. configure this new DbContext in Startup.cs of UI project. Add following lines to ConfigureServices method.
+	```
+	services.AddDbContext<ProjectDbContext>(options => 
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("ProjectConnection")));
+6. execute add-migration
+	```
+	Add-Migration InitMigration -Context ProjectDbContext
+	```
+	![InfrastructureDbContext](https://user-images.githubusercontent.com/37914930/130662536-77e348c3-abcb-434d-9c19-5602414f8b48.png)
+   and update-database -Context ProjectDbContext
+   Add update-database command executes successfully, you will received message for “Done” and you can see you database also created on SQL server.
