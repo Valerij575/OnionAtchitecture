@@ -60,3 +60,24 @@ Create a new database context so we can update the database with this new model.
 	![InfrastructureDbContext](https://user-images.githubusercontent.com/37914930/130662536-77e348c3-abcb-434d-9c19-5602414f8b48.png)
    and update-database -Context ProjectDbContext
    Add update-database command executes successfully, you will received message for “Done” and you can see you database also created on SQL server.
+   
+  ## Application Core
+  All of our services, interfaces and ViewModels will go here.
+  
+  1. Create a new Class Library (.NET Core) - CleanArchitecture.Application
+  2. Add following folders on project CleanArchitecture.Application:
+  	- Interfaces
+  	- Services
+  	- ViewModels
+  	A view model represents the data that you want to display on your view/page, whether it be used for static text or for input values (like textboxes and dropdown lists) that can be added to the database (or edited). It is something different than your domain model. It is a model for the view. In other words, it creates a mask for the domain models.
+  3. Create a new class under ViewModels folder named ProjectViewModel. For the time being we will get a list of Products from the database. 
+  4. Create a new interface to act as a contract to the functionality that we’re trying to implement. 
+  	This method will return list of Projects, and it only knows about the ViewModel, not about the core domain model Project, so we are abstracting the core entity by doing this, rather than having everything in one place.
+	
+  Before we write the implementation for IProjectService, we have to define a way to get the data from the database, to do that what we normally use in .NET is an ORM called Entity Framework, but we will use the Repository pattern to decouple the business logic and the data access layers in our application.
+  The Repository Design Pattern in C# Mediates between the domain and the data mapping layers using a collection-like interface for accessing the domain objects. In other words, we can say that a Repository Design Pattern acts as a middleman or middle layer between the rest of the application and the data access logic.
+	
+   5. Add another folder called Interfaces under CleanArchitecture.Domain project. Add a new interface named IProjectRepository.cs.
+   6. Under CleanArchitecture.Application project, under services folder, add a new class, ProjectService.cs, and inherit it from IProjectService.
+   7. Implement ProjectRepository under CleanArchitecture.Infra.Data Project with Create new Repositories Folder and create new class with name “ProjectRepository” under this new Repositories Folder.
+   8. Now we need to inject the I ProjectRepository, Inject it as you would normally do dependency injection in .NET.
