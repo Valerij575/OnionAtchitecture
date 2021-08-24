@@ -14,4 +14,6 @@
 	Data knows about how to access our data
 	IoC (Inversion of Control) will help us to dependency injection.
 	
+	![SolutionArchitecture](https://user-images.githubusercontent.com/37914930/130619922-6cf95db7-285d-4eaf-bce5-1a5ab478ae20.png)
+	
 3. Create the MVC web application under UI.MVC folder and create new project on folder “CoreCleanArchitecture.Web”.
