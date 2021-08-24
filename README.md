@@ -31,3 +31,9 @@
 3. For creating the migration code, we use ‘add-migration MigrationName’ command.
 4. Execute ‘update-database’ command for update Database. Us you can see you database also created on SQL server.
 	![Database architecture](https://user-images.githubusercontent.com/37914930/130621677-e5b450e2-fe12-4531-ad02-545460e9a2ba.png)
+
+
+## Domain
+1. Add a Class Library project to our domain layer which will hold the core entities.
+2. Add a new folder Models (or Entities), for the sake of this article let’s assume we are building a library system
+3. Add Project model to the Models folder.
