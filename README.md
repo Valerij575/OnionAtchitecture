@@ -26,7 +26,7 @@
    “ConnectionStrings”: {
 	“DefaultConnection”: “Server=DESKTOP-JKRRO7I;Database=aspnet-CoreCleanArchitecture.Web-75CCCCEC-3C58–4A33–9B36-FE792EA54795;Trusted_Connection=True;MultipleActiveResultSets=true”
 	}
-```
+
 2. Open Package Manager Console from the Tools Menu and select the Default project for which you would like to generate migrations code
 3. For creating the migration code, we use ‘add-migration MigrationName’ command.
 4. Execute ‘update-database’ command for update Database. Us you can see you database also created on SQL server.
