@@ -1,7 +1,7 @@
 ﻿using CleanArchitecture.Domain.Models;
 using System.Collections.Generic;
 
-namespace CleanArchitecture.Application.ViewModel
+namespace CleanArchitecture.Application.ViewModels
 {
     public class ProjectViewModel
     {

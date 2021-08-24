@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.ViewModel;
+﻿using CleanArchitecture.Application.ViewModels;
 
 namespace CleanArchitecture.Application.Interfaces
 {

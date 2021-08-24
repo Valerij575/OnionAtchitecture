@@ -1,5 +1,5 @@
 ﻿using CleanArchitecture.Application.Interfaces;
-using CleanArchitecture.Application.ViewModel;
+using CleanArchitecture.Application.ViewModels;
 using CleanArchitecture.Domain.Interfaces;
 
 namespace CleanArchitecture.Application.Services
